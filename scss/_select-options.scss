@@ -1,14 +1,17 @@
 select-options {
+  align-items: flex-start;
   background-color: $white;
-  border: 1px solid $black;
+  border: 1px solid $light-gray;
+  border-radius: 4px;
   display: flex;
   flex-flow: column wrap;
-  margin-top: 25px;
+  margin-top: 60px;
   opacity: 0;
-  padding: 5px;
+  padding: 16px 24px;
   position: absolute;
+  width: 100%;
   
-  &.open {
+  &.is-open {
     opacity: 1;
   }
   
@@ -17,7 +20,43 @@ select-options {
   button:active {
     background: none;
     border: 0;
+    cursor: pointer;
+    font-family: "Sailec",sans-serif;
+    font-size: 16px;
     outline: none;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  button:hover {
+    opacity: .75;
+  }
+
+  button + button:not(:last-of-type) {
+    margin-top: 16px;
+  }
+
+  button:not(:last-of-type) {
+    padding: 0;
+  }
+
+  button:last-of-type {
+    background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M0.5%208.00006C0.5%207.45978%200.937982%207.0218%201.47826%207.0218H14.5217C15.062%207.0218%2015.5%207.45978%2015.5%208.00006C15.5%208.54034%2015.062%208.97832%2014.5217%208.97832H1.47826C0.937982%208.97832%200.5%208.54034%200.5%208.00006Z%22%20fill%3D%22%2309112B%22%2F%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M8%200.500061C8.54028%200.500061%208.97826%200.938043%208.97826%201.47832V14.5218C8.97826%2015.0621%208.54028%2015.5001%208%2015.5001C7.45972%2015.5001%207.02174%2015.0621%207.02174%2014.5218V1.47832C7.02174%200.938043%207.45972%200.500061%208%200.500061Z%22%20fill%3D%22%2309112B%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 15px;
+    padding-left: 25px;
+    margin-top: 32px;
+  }
+
+  button:last-of-type::before {
+    background-color: $light-gray;
+    content: '';
+    left: 0;
+    position: absolute;
+    height: 1px;
+    bottom: 52px; 
+    width: 100%;
   }
 }
 

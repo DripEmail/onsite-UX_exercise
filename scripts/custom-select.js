@@ -23,14 +23,14 @@ define(['hyper-html'], function (hyperHTML) {
                     </button>`
             })
             return hyperHTML.wire()`
-                <custom-select onclick=${this.toggleDropdown.bind(this)} id = ${this.config.id}>
+                <custom-select onclick=${this.toggleDropdown.bind(this)} id = ${this.config.id} class=${this.isOpen && 'is-active'}>
                     <custom-select-input>
                         <ui-label id="custom-select-label">${this.selectedOption.value || 'Please select...'}</ui-label>
-                        <svg width=20 height=15>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.53 7.47a.75.75 0 00-1.06 0L10 10.94 6.53 7.47a.75.75 0 00-1.06 1.06l4 4a.75.75 0 001.06 0l4-4a.75.75 0 000-1.06z" fill="#09112B" />
+                        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.53033 0.46967C9.23744 0.176777 8.76256 0.176777 8.46967 0.46967L5 3.93934L1.53033 0.46967C1.23744 0.176777 0.762563 0.176777 0.46967 0.46967C0.176777 0.762563 0.176777 1.23744 0.46967 1.53033L4.46967 5.53033C4.61032 5.67098 4.80109 5.75 5 5.75C5.19891 5.75 5.38968 5.67098 5.53033 5.53033L9.53033 1.53033C9.82322 1.23744 9.82322 0.762563 9.53033 0.46967Z" fill="#09112B"/>
                         </svg>
                     </custom-select-input>
-                    <select-options class=${this.isOpen && 'open'}>
+                    <select-options class=${this.isOpen && 'is-open'}>
                         ${selectOptions}
                     </select-options>
                 </custom-select>`;

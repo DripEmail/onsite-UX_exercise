@@ -1,9 +1,19 @@
 @font-face {
   font-family:'Sailec';
   src:
-    url(https://n7nqziuw1z4b1r6k2adhav10-wpengine.netdna-ssl.com/wp-content/themes/sleeknote_v2/assets/fonts/Sailec-Regular/font.woff2) format("woff2"),
-    url(https://n7nqziuw1z4b1r6k2adhav10-wpengine.netdna-ssl.com/wp-content/themes/sleeknote_v2/assets/fonts/Sailec-Regular/font.woff) format("woff");
+    url('../assets/Sailec-Regular.woff2') format("woff2"),
+    url('../assets/Sailec-Regular.woff') format("woff");
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family:'Sailec';
+  src:
+    url('../assets/Sailec-Bold.woff2') format("woff2"),
+    url('../assets/Sailec-Bold.woff') format("woff");
+  font-style: normal;
+  font-weight: 700;
   font-display: swap;
 }

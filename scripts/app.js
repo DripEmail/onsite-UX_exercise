@@ -1,7 +1,7 @@
 require(['components', 'hyper-html'], function (components, hyperHTML) {
     var win = this;
     let showSelect = true;
-    let domains = new Set(['dashboard.sleeknote.com', 'sleeknote.com', 'app.sleeknote.com']);
+    let domains = new Set(['https://www.sleeknote.com', 'https://www.your-domain.com', 'https://www.dummy-site.com']);
     let selectedOption;
 
     render = () => {
@@ -61,15 +61,15 @@ require(['components', 'hyper-html'], function (components, hyperHTML) {
         }
         // main HTML goes here
         hyperHTML.bind(win.document.body)`
-            <div id="assignment">
-                <h5 class="header">ASSIGNMENT</h5>
-                <h1 class="title">Create the component</h1>
-                <text class="description">We would like you to create the component below with its associated states - immediate and nested.</text>
-                <div>${element}</div>
+            <div id="assignment" class="assignment">
+                <h5 class="assignment__header">Assignment</h5>
+                <h1 class="assignment__title">Create the component</h1>
+                <text class="assignment__description">We would like you to create the component below with its associated states - immediate and nested.</text>
+                <div class="assignment__holder">${element}</div>
                 <form onsubmit=${onsubmit} id=form hidden />
             </div>
 
     `
     }
     render();
- })
+})

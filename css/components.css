@@ -1,8 +1,15 @@
 @font-face {
   font-family: 'Sailec';
-  src: url(https://n7nqziuw1z4b1r6k2adhav10-wpengine.netdna-ssl.com/wp-content/themes/sleeknote_v2/assets/fonts/Sailec-Regular/font.woff2) format("woff2"), url(https://n7nqziuw1z4b1r6k2adhav10-wpengine.netdna-ssl.com/wp-content/themes/sleeknote_v2/assets/fonts/Sailec-Regular/font.woff) format("woff");
+  src: url("../assets/Sailec-Regular.woff2") format("woff2"), url("../assets/Sailec-Regular.woff") format("woff");
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Sailec';
+  src: url("../assets/Sailec-Bold.woff2") format("woff2"), url("../assets/Sailec-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
   font-display: swap; }
 
 html,
@@ -14,35 +21,37 @@ body {
   display: flex;
   font-family: "Sailec",sans-serif;
   font-weight: normal;
+  line-height: 1.3;
   margin: 0;
   padding: 0; }
 
 *, ::after, ::before {
   box-sizing: border-box; }
 
-#assignment {
+.assignment {
   display: flex;
   flex-flow: column nowrap;
   margin: auto;
   max-width: 844px;
   padding: 50px 166px;
   width: 100%; }
-
-.header {
-  color: #066756;
-  font-size: 11px;
-  margin: 0; }
-
-.title {
-  color: #000;
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 120%;
-  margin: 5px 0 12px; }
-
-.description {
-  color: #25345A;
-  margin-bottom: 41px; }
+  .assignment__header {
+    color: #066756;
+    font-size: 11px;
+    font-weight: 500;
+    margin: 0;
+    text-transform: uppercase; }
+  .assignment__title {
+    color: #000;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 5px 0 12px; }
+  .assignment__description {
+    color: #25345A;
+    font-size: 17px;
+    margin-bottom: 41px; }
+  .assignment__holder {
+    position: relative; }
 
 input:invalid {
   border-color: red; }
@@ -51,30 +60,64 @@ custom-select {
   color: #6A799F;
   cursor: pointer;
   flex-flow: row wrap; }
+  custom-select.is-active {
+    color: #09112B; }
   custom-select, custom-select-input {
     display: flex; }
   custom-select-input {
+    align-items: center;
     border: 1px solid #000;
     border-radius: 4px;
     display: flex;
     justify-content: space-between;
     padding: 14px 16px;
     width: 512px; }
+    .is-active custom-select-input {
+      border-color: #5457FF; }
 
 select-options {
+  align-items: flex-start;
   background-color: #fff;
-  border: 1px solid #000;
+  border: 1px solid #DDE3EF;
+  border-radius: 4px;
   display: flex;
   flex-flow: column wrap;
-  margin-top: 25px;
+  margin-top: 60px;
   opacity: 0;
-  padding: 5px;
-  position: absolute; }
-  select-options.open {
+  padding: 16px 24px;
+  position: absolute;
+  width: 100%; }
+  select-options.is-open {
     opacity: 1; }
   select-options button,
   select-options button:focus,
   select-options button:active {
     background: none;
     border: 0;
-    outline: none; }
+    cursor: pointer;
+    font-family: "Sailec",sans-serif;
+    font-size: 16px;
+    outline: none;
+    padding-bottom: 0;
+    padding-top: 0; }
+  select-options button:hover {
+    opacity: .75; }
+  select-options button + button:not(:last-of-type) {
+    margin-top: 16px; }
+  select-options button:not(:last-of-type) {
+    padding: 0; }
+  select-options button:last-of-type {
+    background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M0.5%208.00006C0.5%207.45978%200.937982%207.0218%201.47826%207.0218H14.5217C15.062%207.0218%2015.5%207.45978%2015.5%208.00006C15.5%208.54034%2015.062%208.97832%2014.5217%208.97832H1.47826C0.937982%208.97832%200.5%208.54034%200.5%208.00006Z%22%20fill%3D%22%2309112B%22%2F%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M8%200.500061C8.54028%200.500061%208.97826%200.938043%208.97826%201.47832V14.5218C8.97826%2015.0621%208.54028%2015.5001%208%2015.5001C7.45972%2015.5001%207.02174%2015.0621%207.02174%2014.5218V1.47832C7.02174%200.938043%207.45972%200.500061%208%200.500061Z%22%20fill%3D%22%2309112B%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 15px;
+    padding-left: 25px;
+    margin-top: 32px; }
+  select-options button:last-of-type::before {
+    background-color: #DDE3EF;
+    content: '';
+    left: 0;
+    position: absolute;
+    height: 1px;
+    bottom: 52px;
+    width: 100%; }
