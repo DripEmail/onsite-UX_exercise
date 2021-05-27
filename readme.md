@@ -1,4 +1,5 @@
 ## The Exercise
+
 Fork this repo.
 
 Running the project you will see a dropdown.
@@ -15,19 +16,19 @@ Pressing the "+ Add new domain" transforms the dropdown to a input field.
 
 Remember to consider validation and invalid state.
 
+## Requirements
+
+In order to make it work you'll need [Node](https://nodejs.org/en/download/) version 12 and a Node Package Manager like [yarn](https://yarnpkg.com/getting-started/install).
+
+After setting those up, just run `yarn` or `npm i`.
 
 ## Run it
 
-This is a basic example project so you have the structure to start coding, it is a simplification of our real environment.
 To get it running just execute the following command in the root of the project.
 
-`python -m SimpleHTTPServer 8000`
+`yarn dev`
 
-now you can navigate to http://localhost:8000/ to run your code.
-
-Feel free to add/remove/modify the files in your fork
-
-This is your playground!
+now you can navigate to http://localhost:3000/ to see the project running with [BrowserSync](https://www.browsersync.io/) watching all HTML, CSS and [Sass](https://sass-lang.com/) files.
 
 ## How it works
 

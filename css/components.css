@@ -1,58 +1,80 @@
+@font-face {
+  font-family: 'Sailec';
+  src: url(https://n7nqziuw1z4b1r6k2adhav10-wpengine.netdna-ssl.com/wp-content/themes/sleeknote_v2/assets/fonts/Sailec-Regular/font.woff2) format("woff2"), url(https://n7nqziuw1z4b1r6k2adhav10-wpengine.netdna-ssl.com/wp-content/themes/sleeknote_v2/assets/fonts/Sailec-Regular/font.woff) format("woff");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap; }
+
+html,
+body {
+  height: 100%; }
+
+body {
+  align-items: center;
+  display: flex;
+  font-family: "Sailec",sans-serif;
+  font-weight: normal;
+  margin: 0;
+  padding: 0; }
+
+*, ::after, ::before {
+  box-sizing: border-box; }
 
 #assignment {
-    width: 50%;
-    margin: auto;
-    padding: 50px 100px;
-    font-family: 'Lato', sans-serif;
-    display: flex;
-    flex-flow: column wrap;
-}
+  display: flex;
+  flex-flow: column nowrap;
+  margin: auto;
+  max-width: 844px;
+  padding: 50px 166px;
+  width: 100%; }
 
 .header {
-    font-size: 11px;
-    color: #066756;
-}
+  color: #066756;
+  font-size: 11px;
+  margin: 0; }
+
 .title {
-    font-weight: 900;
-    font-size: 40px;
-    line-height: 120%;
-}
+  color: #000;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 120%;
+  margin: 5px 0 12px; }
 
 .description {
-    margin-bottom: 50px;
-}
-
-custom-select {
-    display: flex;
-    flex-flow: row wrap;
-}
-custom-select custom-select-input {
-    border: 1px solid #000;
-    padding: 2px 7px;
-}
-select-options {
-    position: absolute;
-    margin-top: 25px;
-    opacity: 0;
-    display: flex;
-    flex-flow: column wrap;
-    background-color: #fff;
-    border: 1px solid #000;
-    padding: 5px;
-}
-
-select-options.open {
-    opacity: 1;
-}
-
-select-options button,
-select-options button:focus,
-select-options button:active {
-    border: none;
-    background: none;
-    outline: none;
-}
+  color: #25345A;
+  margin-bottom: 41px; }
 
 input:invalid {
-    border-color: red;
-}
+  border-color: red; }
+
+custom-select {
+  color: #6A799F;
+  cursor: pointer;
+  flex-flow: row wrap; }
+  custom-select, custom-select-input {
+    display: flex; }
+  custom-select-input {
+    border: 1px solid #000;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 16px;
+    width: 512px; }
+
+select-options {
+  background-color: #fff;
+  border: 1px solid #000;
+  display: flex;
+  flex-flow: column wrap;
+  margin-top: 25px;
+  opacity: 0;
+  padding: 5px;
+  position: absolute; }
+  select-options.open {
+    opacity: 1; }
+  select-options button,
+  select-options button:focus,
+  select-options button:active {
+    background: none;
+    border: 0;
+    outline: none; }

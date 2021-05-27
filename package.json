@@ -4,8 +4,16 @@
   "description": "This is a basic example project so you have the structure to start coding, it is a simplification of our real environment. To get it running just execute the following command in the root of the project.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "concurrently --kill-others \"yarn run server\" \"yarn run sass\" \"yarn run browser-sync\"",
+    "server": "python -m SimpleHTTPServer 8000",
+    "sass": "node-sass -w scss/ -o css/",
+    "browser-sync": "browser-sync start --proxy 'localhost:8000' --files '**/*.css, *.html, **/*.scss, **/*.js'"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Matheus Costa",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.26.14",
+    "concurrently": "^6.2.0",
+    "node-sass": "^6.0.0"
+  }
 }

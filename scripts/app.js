@@ -27,6 +27,7 @@ require(['components', 'hyper-html'], function (components, hyperHTML) {
             type: 'text',
             pattern: '^((?:https?:\\/\\/)?[^./]+(?:\\.[^./]+)+(?:\\/.*)?)$',
             title: 'Please enter a valid domain',
+            required: true,
         })
         const addButton = components.button.render({
             id: 'addButton',
