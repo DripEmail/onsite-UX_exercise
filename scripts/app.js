@@ -28,14 +28,17 @@ require(['components', 'hyper-html'], function (components, hyperHTML) {
             pattern: '^((?:https?:\\/\\/)?[^./]+(?:\\.[^./]+)+(?:\\/.*)?)$',
             title: 'Please enter a valid domain',
             required: true,
+            placeholder: 'https://link.com',
         })
         const addButton = components.button.render({
             id: 'addButton',
+            class: 'assignment__link',
             caption: 'Add',
             type: 'submit',
         })
         const cancelButton = components.button.render({
             id: 'cancelButton',
+            class: 'assignment__link',
             caption: 'Cancel',
             onclick: () => {
                 showSelect = true;

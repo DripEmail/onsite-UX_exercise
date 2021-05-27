@@ -1,4 +1,31 @@
 
-input:invalid {
-  border-color: $red;
+::placeholder {
+  color: var(--gray-color);
+}
+
+input {
+  border: 1px solid var(--whitesmoke-color);
+  border-radius: var(--base-radius);
+  display: block;
+  font-size: 16px;
+  font-family: var(--font-family);
+  height: 48px;
+  margin-bottom: 12px;
+  padding: 14px 24px;
+  transition: border .25s linear;
+  width: 100%;
+  
+  &:hover {
+    border-color: var(--gray-color);
+  }
+  
+  &:focus {
+    border-color: var(--primary-color);
+    color: var(--secondary-color);
+    outline: 0;
+  }
+  
+  &:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: var(--danger-color);
+  }
 }

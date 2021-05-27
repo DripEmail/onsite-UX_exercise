@@ -12,7 +12,7 @@ define(['hyper-html', 'custom-select'], function (hyperHTML, CustomSelect) {
         button: {
             render: function (config) {
                 return hyperHTML.wire()`
-                    <button form="form" type=${config.type || 'button'} id=${config.id} onclick=${config.onclick}>
+                    <button class=${config.class} form="form" type=${config.type || 'button'} id=${config.id} onclick=${config.onclick}>
                         <ui-label>${config.caption}</ui-label>
                     </button>`;
             }
@@ -20,7 +20,7 @@ define(['hyper-html', 'custom-select'], function (hyperHTML, CustomSelect) {
         input: {
             render: function (config) {
                 return hyperHTML.wire()`
-                    <input required=${config.required} form="form" id=${config.id} type=${config.type} oninput=${config.oninput} pattern=${config.pattern} title=${config.title}/>`;
+                    <input required=${config.required} placeholder=${config.placeholder} form="form" id=${config.id} type=${config.type} oninput=${config.oninput} pattern=${config.pattern} title=${config.title}/>`;
             }
         },
     }

@@ -1,15 +1,27 @@
 select-options {
   align-items: flex-start;
-  background-color: $white;
-  border: 1px solid $light-gray;
-  border-radius: 4px;
+  background-color: var(--light-color);
+  border: 1px solid var(--whitesmoke-color);
+  border-radius: var(--base-radius);
+  box-shadow: 0 1.1px 1.7px rgba(14, 25, 57, .016), 0 3.8px 5.8px rgba(14, 25, 57, .024), 0 16px 24px rgba(14, 25, 57, .04);
   display: flex;
   flex-flow: column wrap;
   margin-top: 60px;
   opacity: 0;
   padding: 16px 24px;
   position: absolute;
+  transition: opacity .25s linear;
   width: 100%;
+
+  &::after {
+    background-color: var(--whitesmoke-color);
+    content: '';
+    left: 0;
+    position: absolute;
+    height: 1px;
+    bottom: 52px; 
+    width: 100%;
+  }
   
   &.is-open {
     opacity: 1;
@@ -21,15 +33,17 @@ select-options {
     background: none;
     border: 0;
     cursor: pointer;
-    font-family: "Sailec",sans-serif;
+    font-family: var(--font-family);
     font-size: 16px;
+    margin-bottom: 0;
     outline: none;
     padding-bottom: 0;
     padding-top: 0;
+    transition: opacity .25s linear;
   }
 
   button:hover {
-    opacity: .75;
+    opacity: .65;
   }
 
   button + button:not(:last-of-type) {
@@ -41,23 +55,11 @@ select-options {
   }
 
   button:last-of-type {
-    background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M0.5%208.00006C0.5%207.45978%200.937982%207.0218%201.47826%207.0218H14.5217C15.062%207.0218%2015.5%207.45978%2015.5%208.00006C15.5%208.54034%2015.062%208.97832%2014.5217%208.97832H1.47826C0.937982%208.97832%200.5%208.54034%200.5%208.00006Z%22%20fill%3D%22%2309112B%22%2F%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M8%200.500061C8.54028%200.500061%208.97826%200.938043%208.97826%201.47832V14.5218C8.97826%2015.0621%208.54028%2015.5001%208%2015.5001C7.45972%2015.5001%207.02174%2015.0621%207.02174%2014.5218V1.47832C7.02174%200.938043%207.45972%200.500061%208%200.500061Z%22%20fill%3D%22%2309112B%22%2F%3E%3C%2Fsvg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cdefs%2F%3E%3Cpath%20fill%3D%22%2309112B%22%20fill-rule%3D%22evenodd%22%20d%3D%22M.5%208c0-.54.438-.978.978-.978h13.044a.978.978%200%20110%201.956H1.478A.978.978%200%2001.5%208z%22%20clip-rule%3D%22evenodd%22%2F%3E%3Cpath%20fill%3D%22%2309112B%22%20fill-rule%3D%22evenodd%22%20d%3D%22M8%20.5c.54%200%20.978.438.978.978v13.044a.978.978%200%2011-1.956%200V1.478C7.022.938%207.46.5%208%20.5z%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E");
     background-repeat: no-repeat;
-    background-position: left center;
-    background-size: 15px;
+    background-position: left 0;
+    background-size: 15px 15px;
     padding-left: 25px;
     margin-top: 32px;
   }
-
-  button:last-of-type::before {
-    background-color: $light-gray;
-    content: '';
-    left: 0;
-    position: absolute;
-    height: 1px;
-    bottom: 52px; 
-    width: 100%;
-  }
 }
-
-

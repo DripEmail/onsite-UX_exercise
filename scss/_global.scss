@@ -1,3 +1,17 @@
+:root {
+  --font-family: "Sailec", sans-serif;
+  --base-radius: 4px;
+  --gray-color: #{$dark-gray};
+  --primary-color: #{$blue};
+  --secondary-color: #{$rock};
+  --danger-color: #{$red};
+  --success-color: #{$green};
+  --light-color: #{$white};
+  --dark-color: #{$black};
+  --purple-color: #{$purple};
+  --whitesmoke-color: #{$light-gray};
+}
+
 html,
 body {
   height: 100%;
@@ -6,7 +20,7 @@ body {
 body {
   align-items: center;
   display: flex;
-  font-family: "Sailec",sans-serif;
+  font-family: var(--font-family);
   font-weight: normal;
   line-height: 1.3;
   margin: 0;

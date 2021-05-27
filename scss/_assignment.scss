@@ -3,31 +3,68 @@
   flex-flow: column nowrap;
   margin: auto;
   max-width: 844px;
-  padding: 50px 166px;
   width: 100%;
   
+  @media screen and (min-width: 800px) {
+    padding: 50px 166px;
+  }
+  
+  @media screen and (max-width: 799px) {
+    padding: 30px;
+  }
+  
   &__header {
-    color: $green;
+    color: var(--success-color);
     font-size: 11px;
     font-weight: 500;
+    letter-spacing: .1em;
     margin: 0;
     text-transform: uppercase;
   }
   
   &__title {
-    color: $black;
+    color: var(--dark-color);
     font-size: 40px;
     font-weight: 700;
     margin: 5px 0 12px;
   }
   
   &__description {
-    color: $dark-gray;
+    color: var(--purple-color);
     font-size: 17px;
     margin-bottom: 41px;
   }
 
   &__holder {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
     position: relative;
+  }
+
+  &__link {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 0;
+    transition: opacity .25s linear;
+  }
+
+  &__link:hover {
+    opacity: .75;
+  }
+
+  &__link:first-of-type {
+    color: var(--primary-color);
+  }
+
+  &__link:last-of-type {
+    color: var(--danger-color);
+  }
+
+  &__link + .assignment__link {
+    margin-left: 12px;
   }
 }

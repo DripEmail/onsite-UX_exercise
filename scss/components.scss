@@ -1,7 +1,12 @@
+// Settings
 @import 'colors';
 @import 'font';
+
+// Generic
 @import 'global';
-@import 'assignment';
 @import 'inputs';
+
+// Components
+@import 'assignment';
 @import 'custom-select';
 @import 'select-options';
